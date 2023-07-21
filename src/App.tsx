@@ -1,5 +1,7 @@
+import { Typography } from '@mui/joy';
+
 function App() {
-	return null;
+	return <Typography level="display1">Hello, world!</Typography>;
 }
 
 export default App;
