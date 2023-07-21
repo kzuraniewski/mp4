@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import '@fontsource/public-sans';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Gallery from './pages/Gallery.tsx';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
+		children: [
+			{
+				path: '/gallery',
+				element: <Gallery />,
+			},
+		],
 	},
 ]);
 

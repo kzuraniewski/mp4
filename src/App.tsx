@@ -1,7 +1,17 @@
-import { Typography } from '@mui/joy';
+import { Outlet } from 'react-router-dom';
+import { CssBaseline } from '@mui/material';
+import Header from './components/Header';
 
-function App() {
-	return <Typography level="display1">Hello, world!</Typography>;
-}
+const App = () => {
+	return (
+		<>
+			<CssBaseline />
+			<Header />
+			<main>
+				<Outlet />
+			</main>
+		</>
+	);
+};
 
 export default App;
